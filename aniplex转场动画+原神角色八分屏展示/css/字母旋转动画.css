@@ -1,0 +1,60 @@
+.content .chars{
+    opacity: 0;
+}
+.content .chars:nth-child(1){
+    animation: chars12 2.4s linear forwards ;
+}
+.content .chars:nth-child(2){
+    animation: chars12 2.2s linear forwards ;
+    animation-delay: 0.2s;
+}
+.content .chars:nth-child(3){
+    animation: chars12 2.0s linear forwards ;
+    animation-delay: 0.4s;
+}
+.content .chars:nth-child(4){
+    animation: chars34 1.8s linear forwards ;
+    animation-delay: 0.6s;
+}
+.content .chars:nth-child(5){
+    animation: chars34 1.6s linear forwards ;
+    animation-delay: 0.8s;
+}
+.content .chars:nth-child(6){
+    animation: chars34 1.4s linear forwards ;
+    animation-delay: 1.0s;
+}
+.content .chars:nth-child(7){
+    animation: chars5 1.2s linear forwards ;
+    animation-delay: 1.2s;
+}
+@keyframes chars12 {
+    from{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(720deg);
+    }
+}
+@keyframes chars34 {
+    from{
+        opacity: 1;
+        transform: rotateY(180deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(720deg);
+    }
+}
+@keyframes chars5 {
+    from{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(360deg);
+    }
+}

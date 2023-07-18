@@ -1,0 +1,90 @@
+.cards .card {
+    transition: .3s;
+    overflow: hidden;
+}
+
+.cards:hover .card {
+    border-left-width: 0.2vw;
+    border-right-width: 0.2vw;
+}
+
+.cards .card:hover {
+    flex: 10;
+}
+
+.cards .card .more {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    opacity: 0;
+    transition: all .3s;
+    position: relative;
+    padding: 3vw;
+}
+
+.cards .card:hover .more {
+    opacity: 1;
+}
+
+.card .more .paint {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70vw;
+    background-size: auto 100%;
+}
+
+.card .more .title {
+    width: 20%;
+    border-top: 0.5vw solid #e3bc8c;
+}
+
+.card .more .bar {
+    width: 20vw;
+    height: 3.5vw;
+    background-color: #cca574;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+.card .more .bar>.point {
+    height: 100%;
+}
+
+.card .more .bar>.text {
+    margin-left: 1vw;
+    color: #24333c;
+    font-size: 1.5vw;
+}
+
+.card .more .bar>.voice {
+    height: 100%;
+    margin-left: auto;
+}
+
+.card .more .profile {
+    margin-top: 2vw;
+    position: relative;
+}
+
+.card .more .profile>p {
+    width: 20vw;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.card .more .profile .point {
+    position: absolute;
+    width: 20px;
+    left: 15px;
+    top: 30px;
+}

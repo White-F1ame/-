@@ -1,0 +1,44 @@
+.cards {
+    opacity: 0;
+    animation: show-cards 2.1s ease-out forwards;
+    animation-delay: 6s;
+}
+
+.aniplex {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /*让盒子内元素按纵轴对齐*/
+    justify-content: center;
+    /*让盒子内元素按横轴对齐*/
+    perspective: 450;
+    -webkit-perspective: 450;
+    animation: hide-aniplex 1s ease-out forwards;
+    animation-delay: 4s;
+}
+
+@keyframes show-cards {
+    from {
+        width: 40vw;
+        opacity: 0;
+    }
+    99% {
+        z-index: -10;
+    }
+    to {
+        width: 100vw;
+        opacity: 1;
+        z-index: 100;
+    }
+}
+
+@keyframes hide-aniplex {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
