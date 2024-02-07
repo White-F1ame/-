@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>二进制数转为十进制数</title>
+    <style>
+        * {
+            margin: 0;
+            /* padding: 0; */
+            /* border: 0; */
+        }
+
+        .container {
+            /* border: 0;
+            margin: 0;
+            padding: 0; */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #55918e;
+        }
+
+        h1 {
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calculate {
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .calculate input {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <!-- 文字描述 -->
+            <h1>二进制转十进制</h1>
+            <div class="calculate">
+                <!-- 实际功能 -->
+                <input type="text" placeholder="请输入二进制数(最多8位)" id="inputOne" maxlength="8">
+                <button>转换</button>
+                <input type="text" placeholder="十进制数" id="inputTwo" disabled="true">
+            </div>
+        </div>
+</body>
+<script>
+    // 将二进制转换为十进制
+    // 按下按钮第一个输入框内的二进制数,转为十进制数
+    const inputOne = document.querySelector('.calculate #inputOne')
+    const inputTwo = document.querySelector('.calculate #inputTwo')
+    const button = document.querySelector('.calculate button')
+    button.addEventListener('click', function () {
+        flag = true
+        // 如果输入了 0 或 1 以外的任何内容，则必须通知用户
+        for (let i = 0; i < inputOne.value.length; i++) {
+            const element = +inputOne.value[i];
+            if (element !== 0 && element !== 1) {
+                alert('警告：只能输入0或1！')
+                flag = false
+                break
+            }
+        }
+        if (flag) {
+            console.log("yes!");
+            // 二进制数转为十进制数
+            number = parseInt(inputOne.value, 2);
+            // 将十进制数输出在第二个框内
+            inputTwo.value = number
+        }
+    })
+</script>
+
+</html>
